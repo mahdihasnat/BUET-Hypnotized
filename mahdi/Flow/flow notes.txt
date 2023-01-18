@@ -34,3 +34,7 @@ d. total path = |U| - maximum matching
 e. So maximum matching = minimum path cover
 f. For weighted graph, use min cost max flow
 
+3. Min vertex cover on bipertite graph:
+a. direct matching edges from right to left, unmatched edges from left to right
+b. mark visited nodes reachable from any unmatched nodes from left.
+b. take visited nodes from right and unvisited nodes from left as vertex cover
