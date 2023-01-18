@@ -1,1 +1,1 @@
-Main folder is `Template`. Push to it.
+Main folders are `Template` and `Notes`.
