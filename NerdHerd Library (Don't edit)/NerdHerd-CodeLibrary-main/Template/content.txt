@@ -1,0 +1,120 @@
+Data Structure
+0. Segment tree lazy
+1. 2D Segment Tree Lazy
+2. Segment Tree Beats
+3. Persistent segment tree Lazy
+4. 2D sparse table 		XXXX
+5. Implicit Segtree 
+6. Minimum Stack
+7. Treap
+8. 1D/2D BIT
+9. DSU with rollback
+10. MO
+11. MO in tree			XXXX
+12. MO with update
+13. Ordered Set
+
+String
+1. Hashing 2D
+2. Prefix Function
+3. Manacher’s algo
+4. Aho Corasick
+5. Suffix Array DA/Normal
+6. Suffix Automata 
+
+DP
+1. SOS DP 
+2. D and C DP
+3. Knuth Optimization
+4. Convex Hull Trick
+5. Monotone Queue 
+//Dont know
+6. 1D1D optimization 	xxxx
+7. Connected Component DP 	xxxx
+8. Aliens trick 	xxxx
+9. x2 +1 Trick   	xxxx
+10. LIS binary search
+
+
+Graph
+1. Articulation Point and Bridge
+2. SCC
+3. LCA O(1) and Binary Lifting
+4. 2-SAT
+5. HLD
+6. Centroid
+7. Euler Circuit and Tour
+8. Stable Marriage
+9. K-th shortest path 	xxxx
+10. Dinic	
+11. Hungarian
+12. Min-cost Max Flow 1/2
+13. Hopcroft
+14. Link-Cut Tree
+	
+
+Number Theory
+1. Inverse mod with non prime mod(EGCD)	
+2. Pollard Rho	
+3. Segmented Sieve
+4. Prime Factorization with Sieve	xxxx
+5. Diophantine
+6. N-th fib
+7. Euler totient
+8. Mod inverse in O(n)
+9. Miller Rabin	
+10. CRT	
+11. Discrete Log
+12. Primitive root and Discrete Root
+13. Enumerating submask
+14. FFT (HellBent)
+15. NTT (Anik Da)
+16. Matrix Expo	
+17. Simpsons Integration	
+18. Gauss Elimination	
+19. XOR trick
+20. Simplex
+21. Floor Sum
+22. Floor Ceil Change
+23. Berlekamp Massey
+24. Fraction Class	xxxx
+25. Continued Fraction
+26. Partition Function	
+27. Euler Number	xxxx
+28. Stirling Number Kind 1 and 2	
+29. FWHT
+
+Miscellaneous
+1. Bitset Iterations
+2. Stress Tester
+3. Random Number Generator (rng)
+4. Merge 2 list O(1), Merge 2 sorted vector, Optimize Program
+5. Optimize Hashtable
+6. Unordered Map Pair
+7. Custom Comp		xxxx
+9. Big INT		
+10. Debug template
+11. Notes	//Pore
+12. Formula Euler , Stirling , Dearrangement ,Mo on tree, Huffman Coding//Pore
+
+
+GEO
+1. GEO 2D
+2. GEO 3D
+3. Nearest point
+4. Scaling and Polar sort
+5. Point ordering by angle
+
+
+//Changed
+1. Euler Tour
+2. Suffix Array
+3. Palindromic Tree added
+
+//Nite hobe
+1. Dinic with LR flow
+
+
+optional 
+1. persistent segtree without pointer
+2. no need segtree 2D
