@@ -1,0 +1,36 @@
+1. Flow with edge demand:
+
+Feasible Flow steps:
+0. better use dinic
+a. for each edge u->v, add edge (u,v,c-l), (ss,v,l) , (u,tt,l)
+b. if ther are nodes s,t with - and + demand, add (t,s,INF)
+c. if maxflow(ss,tt)=sum(l), feasible flow exists
+d. feasible flow for u->v is flow in u->v + l
+e. maximum (s,t) flow can be obtained by max (s,t) flow on current graph ( do not clear edge.flow of previous call)
+
+2. Independent Set on bipertite graph:
+Given G=(U,V,E), find maximum |U'| + |V'| Independent set U' and V' such that U' and V' has no common edges.
+Solution:
+a. flow graph on the vertices U union V and {s,t}
+b. for (u,v) in E, add edge (u,v,oo)
+c. for u in U, add edge (s,u,1)
+d. for v in V, add edge (v,t,1)
+e. find a finite capacity cut (S,T), with s in S, t in T.
+   Let U' = U intersect S and V' = V intersect T
+   Then U' and V' is Independent set since there are no infinite capacity edges crossing the cut.
+f. size of the cut is |U-U'| + |V-V'| = |U| + |V| - |U' union V'|
+g. so min cut = maximum Independent set
+
+
+2. Path Cover:
+Find minimum number of paths such that each node is covered by exactly one path.
+Solution (only DAG):
+a. new bipertite graph G' with twice the node of G, u in G -> u_out,u_in in G'
+b. for each edge u->v in G, add edge u_out->v_in
+c. find maximum matching in G'
+d. u_out matches with at most one edge, u_in matches with at most one edge
+c. create path with matching edges
+d. total path = |U| - maximum matching
+e. So maximum matching = minimum path cover
+f. For weighted graph, use min cost max flow
+
