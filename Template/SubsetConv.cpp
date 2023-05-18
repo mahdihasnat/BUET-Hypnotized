@@ -9,7 +9,7 @@ for (int mask=0; mask<(1<<k); mask++)
     }
 return p;
 }
-vector<int> SubsetConvolution(const vector<int> &a, const vector<int> &b) {
+vector<int> SubsetConvolution( vector<int> &a, vector<int> &b) {
 int k = __builtin_ctz(a.size());
 assert(a.size() == (1<<k) && b.size() == (1<<k));
 vector<int> Z(1<<k);
@@ -24,11 +24,8 @@ for (int j=0; j<=i; j++)
     for (int mask = 0; mask < (1<<k); mask++)
         C[i][mask] =add(C[i][mask], gun(A[j][mask],B[i-j][mask]));
 C[i] = SOS(C[i], 1, 1);
-}
-vector<int> ans(1<<k);
+} vector<int> ans(1<<k);
 for (int mask=0; mask<(1<<k); mask++) {
 ans[mask] = C[__builtin_popcount(mask)][mask];
+} return ans;
 }
-return ans;
-}
-
