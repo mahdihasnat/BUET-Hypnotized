@@ -44,7 +44,7 @@ example:
     notebook-generator ./ --author "Universidad Tecnologica de Pereira" --initials UTP --size 12 --columns 3 --paper a4paper --image ./in-silicon
     
     from Notebook-generator directory:
-    ./bin/notebookgen ./../final/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 9
+	./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10
 
 The second one will create a 'notebook.pdf' file in the current directory.
 
