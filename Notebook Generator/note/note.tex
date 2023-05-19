@@ -1,0 +1,84 @@
+\begin{itemize}
+	\item  Hall’s Marriage Theorem In a bipartite
+graph G = A $\cup$ B, a matching saturating A exists iff $|N(S)| >= |S|$ for all S $\subset$ A
+	\item - $c'((s', v)) = \sum_{u \in V} d((u, v))$ for each edge $(s', v)$.\\
+- $c'((v, t')) = \sum_{w \in V} d((v, w))$ for each edge $(v, t')$.\\
+- $c'((u, v)) = c((u, v)) - d((u, v))$ for each edge $(u, v)$ in the old network.\\
+- $c'((t, s)) = \infty$
+\item Every positive integer has a unique representation as a sum of Fibonacci numbers such that no two numbers are equal or
+consecutive Fibonacci numbers. Pythagorean triples $(n^2-m^2 , 2nm , n^2 + m^2) $ where $ 0<m<n$ , $n$ and $m$ are  coprime and at least one of n and m is even.  Each box may contain at most one ball, and in addition, no two
+adjacent boxes may both contain a ball.${n-k+1}\choose{n-2k+1}$
+\item The Catalan number $C_n$ equals the number of valid parenthesis expressions
+that consist of $n$ left parentheses and $n$ right parentheses.
+$1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796$\\
+$C_n = \frac{1}{n+1} {{2n}\choose{n}}$
+there are $C_n$ binary trees of n nodes,
+there are $C_{n-1}$ rooted trees of n nodes
+\item  The number of derangements of elements $\left\{1,2,...,n\right\}$,
+i.e., permutations where no element remains in its original place.\\
+$f (n) = (n-1)(f(n-2)+ f (n-1)) , n > 2$
+There are $n-1$ ways to choose an element x that
+replaces the element 1.
+Option 1: We also replace the element x with the element 1. After this, the
+remaining task is to construct a derangement of $n-2$ elements.
+Option 2: We replace the element x with some other element than 1. Now we
+have to construct a derangement of $n-1$ element, because we cannot replace the
+element x with the element 1, and all other elements must be changed.\\
+Another formula
+$F(n) = n!-\binom{n}{1} \times (n-1)!+ \binom{n}{2} \times (n-2)!-..…+ (-1)^k \times \binom{n}{k} \times (n-k)!+….+(-1)^n$
+\item $\sum_{m = 0}^n \binom{m}{k} = \binom{n + 1} {k + 1}$~~~~~~~~~~~~~~~ $\sum_{k = 0}^m  \binom {n + k} k = \binom {n + m + 1} m$ ~~~~~~~~~~~~~~~~~~~ ${\binom n 0}^2 + {\binom n 1}^2 + \cdots + {\binom n n}^2 = \binom {2n} n$
+\item $1 \binom n 1 + 2 \binom n 2 + \cdots + n \binom n n = n 2^{n-1}$ ~~~~~~~~~~~~~~~~~~~~~~~~~~ $\binom n 0 + \binom {n-1} 1 + \cdots + \binom {n-k} k + \cdots + \binom 0 n = F_{n+1}$
+\item The number of necklaces of n pearls, where
+each pearl has m possible colors $\sum_{i=0}^{n-1} \frac{m^{gcd(i,n)}}{n}$
+\item Number of bracket sequence with n open and m close brackets starts with value k
+C(m+n,m)- C(m+n,m-k-1)
+\item The area of the polygon is
+$a+ b/2 - 1 $
+where a is the number of integer points inside the polygon and b is the number
+of integer points on the boundary of the polygon.
+\item Number of lattice point between 2 points 
+$gcd( abs(p1.x- p2.x) ,abs(p1.y- p2.y) )-1$
+\item A useful technique related to Manhattan distances is to rotate all coordinates
+$45$ degrees so that a point $(x, y)$ becomes $(x+ y, y- x)$.
+$|x1-x2| + |y1-y2| = $ max$(|x1' - x2'| , |y1' - y2'|)$
+\item Size of maximum matching in a bipartite graph is equal to the size of its minimum vertex cover, 
+and the minimum vertex cover can be reconstructed after finding the maximum matching. 
+If we remove a vertex from the minimum vertex cover, the size of the minimum vertex cover 
+of the remaining graph is reduced by 1, so the size of the maximum matching is reduced by 1 as well.
+It means that we can always choose to remove a vertex from the minimum vertex cover we found. By the way,
+it also proves that it's always possible to remove a vertex from a bipartite graph so the size of the
+maximum matching decreases by 1 (obviously, if it's not 0 already).
+\item Zigzag numbers are as follows $1, 1, 1, 2, 5, 16, 61, 272, 1385, 7936, 50521 …… $ \\
+$a(n+1) = (\sum_{k=0}^{n} {n\choose k} * a(k) * a(n-k))/2$\\
+$E(n,k) = E(n,k-1) + E(n-1,n-k)$ if $k\geq n$ or $k<1$ $E(n,k) = 0$
+\item The first few values of the partition function, starting with $p(0) = 1$, are:\\
+$1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42, 56, 77, 101, 135, 176, 231, 297, 385, 490, 627, 792, 1002, 1255, 1575, 1958,... $
+\item St kind 2 :  $ A(n,k) = A(n-1,k-1) + k*A(n-1,k)$ ~~~~~~~~~~ St kind 1 :  $ A(n,k) = A(n-1,k-1) + (n-1)*A(n-1,k)$
+\item Eulerian number with k ascents : $A(n,k) = (k+1)*A(n-1,k) + (n-k)*A(n-1,k-1)$
+\item Mo on tree : 1: P = u then [ST(u),ST(v)] , 2:[EN(u),ST(v)] + [ST(P),ST(P)] 
+\end{itemize}
+\begin{multicols}{3}
+St kind 2: 1\\
+0,1\\
+0,1,1\\
+0,1,3,1\\
+0,1,7,6,1\\
+0,1,15,25,10,1\\
+0,1,31,90,65,15,1\\
+0,1,63,301,350,140,21,1\\
+St kind 1: 1\\
+0,1\\
+0,1,1\\
+0,2,3,1\\
+0,6,11,6,1\\
+0,24.50,35,10,1\\
+0,120,274,225,85,15,1\\
+0,720,1764,1624,735,175,21,1\\
+Euler number: 1 \\
+1,0\\
+1,1,0\\
+1,4,1,0\\
+1,11,11,1,0\\
+1,26,66,26,1,0\\
+1,57,302,302,57,1,0\\
+\end{multicols}
