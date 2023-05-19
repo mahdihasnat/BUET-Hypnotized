@@ -44,7 +44,7 @@ struct HLD{
   }
   if (depth[a] > depth[b])
    swap(a, b);
-  int last_heavy_path_max = seg.query(pos[a], pos[b]);
+  int last_heavy_path_max = seg.query(pos[a], pos[b]); //edge pos[a]+1
   res += last_heavy_path_max;
   return res;
  }
