@@ -10,8 +10,7 @@ ll qp(ll a,ll b){
 }
 namespace linear_seq{
 inline vector<int> BM(vector<int> x){
- vector<int> ls,cur;
- int lf,ld;
+ vector<int> ls,cur; int lf,ld;
  for(int i=0; i<int(x.size()); ++i) {
   ll t=0;
   for(int j=0; j<int(cur.size()); ++j)
@@ -22,20 +21,17 @@ inline vector<int> BM(vector<int> x){
    continue;
   }
   ll k=-(x[i]-t)*qp(ld,MOD-2)%MOD;
-  vector<int> c(i-lf-1);
-  c.push_back(k);
+  vector<int> c(i-lf-1); c.push_back(k);
   for(int j=0; j<int(ls.size()); ++j) c.push_back(-ls[j]*k%MOD);
   if(c.size()<cur.size()) c.resize(cur.size());
   for(int j=0; j<int(cur.size()); ++j) c[j]=(c[j]+cur[j])%MOD;
   if(i-lf+(int)ls.size()>=(int)cur.size())
-   ls=cur,lf=i,ld=(t-x[i])%MOD;
-  cur=c;
+   ls=cur,lf=i,ld=(t-x[i])%MOD;  cur=c;
  }
  for(int i=0; i<int(cur.size()); ++i) cur[i]=(cur[i]%MOD+MOD)%MOD;
  return cur;
 }
-int m;
-ll a[SZ],h[SZ],t_[SZ],s[SZ],t[SZ];
+int m; ll a[SZ],h[SZ],t_[SZ],s[SZ],t[SZ];
 inline void mull(ll*p,ll*q){
  for(int i=0; i<m+m; ++i) t_[i]=0;
  for(int i=0; i<m; ++i) if(p[i])
