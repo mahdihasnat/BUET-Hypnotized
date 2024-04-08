@@ -206,31 +206,6 @@ namespace Polygonal {
   }
   return ret;
  }
- int halfPlaneIntersection(DirLine* li, int n, Pt* poly) {
-  sort(li, li + n);
-  int first, last;
-  Pt* p = new Pt[n];
-  DirLine* q = new DirLine[n];
-  q[first=last=0] = li[0];
-  for (int i = 1; i < n; i++) {
-   while (first < last && !onLeft(li[i], p[last-1])) last--;
-   while (first < last && !onLeft(li[i], p[first])) first++;
-   q[++last] = li[i];
-   if (dcmp(q[last].v * q[last-1].v) == 0) {
-    last--;
-    if (onLeft(q[last], li[i].p)) q[last] = li[i];
-   }
-   if (first < last)
-    getIntersection(q[last-1].p, q[last-1].v, q[last].p, q[last].v, p[last-1]);
-  }
-  while (first < last && !onLeft(q[first], p[last-1])) last--;
-  if (last - first <= 1) { delete [] p; delete [] q; return 0; }
-  getIntersection(q[last].p, q[last].v, q[first].p, q[first].v, p[last]);
-  int m = 0;
-  for (int i = first; i <= last; i++) poly[m++] = p[i];
-  delete [] p; delete [] q;
-  return m;
- }
  Polygon simplify (const Polygon& poly) {
   Polygon ret;
   int n = poly.size();
@@ -487,7 +462,6 @@ namespace Circular {
   return Circle(o,R);
  }
 };
-//Polar Sort
 inline bool up (Pt p) {
   return p.y > 0 or (p.y == 0 and p.x >= 0);
 }
