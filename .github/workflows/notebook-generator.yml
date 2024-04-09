@@ -26,14 +26,12 @@ jobs:
         cd ..
         cd ./Notes
         pdflatex main.tex
-        cp ./main.pdf ../Output/notes.pdf
+        cp ./main.pdf ./../Output/notes.pdf
         cd ..
     - name: Upload Generated Notebook
       uses: actions/upload-artifact@v4
       with:
           name: notebook
-          path: |
-            ./Output/codes.pdf
-            ./Notes/notes.pdf
+          path: ./Output/
           compression-level: 0  # no compression
           if-no-files-found: error
