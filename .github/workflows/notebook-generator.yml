@@ -1,0 +1,22 @@
+name: Notebook generator CI
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Dependencies
+      run: |
+        sudo apt-get install texlive
+        cd "./Notebook Generator" && sudo npm install -g notebook-generator && cd ..
+    - name: Generate Notebook
+      run: |
+        cd "./Notebook Generator"
+        ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10
