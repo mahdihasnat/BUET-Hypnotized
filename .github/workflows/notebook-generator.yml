@@ -20,7 +20,7 @@ jobs:
         cd ..
     - name: Generate Notebook
       run: |
-        mdkir Output
+        mkdir Output
         cd "./Notebook Generator"
         ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10 --output ./../Output/codes.pdf
         cd ..
