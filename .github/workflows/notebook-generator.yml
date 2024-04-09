@@ -20,18 +20,18 @@ jobs:
         cd ..
     - name: Generate Notebook
       run: |
+        mkdir Output
         cd "./Notebook Generator"
-        ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10
+        ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10 --output ./../Output/codes.pdf
         cd ..
         cd ./Notes
         pdflatex main.tex
+        cp ./main.pdf ./../Output/notes.pdf
         cd ..
     - name: Upload Generated Notebook
       uses: actions/upload-artifact@v4
       with:
-          name: notebook.pdf
-          path: |
-            ./Notebook Generator/notebook.pdf
-            ./Notes/main.pdf
+          name: notebook
+          path: ./Output/
           compression-level: 0  # no compression
           if-no-files-found: error
