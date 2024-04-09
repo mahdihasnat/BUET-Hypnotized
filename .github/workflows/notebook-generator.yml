@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Install Dependencies
       run: |
-        sudo apt-get install texlive texlive-latex-extra
+        sudo apt-get install texlive texlive-latex-extra pdftk
         cd "./Notebook Generator"
         sudo npm install
         cd ..
@@ -22,12 +22,14 @@ jobs:
       run: |
         mkdir Output
         cd "./Notebook Generator"
-        ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10 --output ./../Output/codes.pdf
+        ./bin/notebookgen ./../Template/ --author "Bangladesh University of Engineering and Technology: BUET Sommohito" --columns 3 --paper a4paper --size 10 --output ./../Output/codes.pdf
         cd ..
         cd ./Notes
         pdflatex main.tex
         cp ./main.pdf ./../Output/notes.pdf
         cd ..
+        cd ./Output
+        pdftk codes.pdf notes.pdf cat output notebook.pdf
     - name: Upload Generated Notebook
       uses: actions/upload-artifact@v4
       with:
