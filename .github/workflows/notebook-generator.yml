@@ -22,3 +22,8 @@ jobs:
       run: |
         cd "./Notebook Generator"
         ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10
+    - name: Upload Generated Notebook
+      uses: actions/upload-artifact@v4
+      with:
+          name: notebook.pdf
+          path: ./Notebook Generator/notebook.pdf
