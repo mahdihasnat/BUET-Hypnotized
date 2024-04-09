@@ -21,6 +21,7 @@ jobs:
     - name: Generate Notebook
       run: |
         cd "./Notebook Generator"
+        echo "This line executed"
         ./bin/notebookgen ./../Template/ --author "BUET Sommohito" --columns 3 --paper a4paper --size 10
     - name: Upload Generated Notebook
       uses: actions/upload-artifact@v4
